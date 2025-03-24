@@ -1,0 +1,43 @@
+@keyframes triangle {
+    0% {
+        transform: rotate(0deg) ;
+    }
+    100% {
+        transform: rotate(360deg) ;
+    }
+}
+
+@keyframes square {
+
+    0%{
+       transform: rotate(0deg) scale(1.1);
+        
+    }
+    25%{
+        transform: rotate(-90deg)  scale(0.9);
+        
+    }
+    50%{
+        transform: rotate(-180deg) scale(1.1);
+    }
+    75%{
+        transform: rotate(-270deg) scale(0.9) ;
+    }
+    100%{
+        transform: rotate(-360deg) scale(1.1) ;
+        
+    }
+}
+
+@keyframes scroll-left {
+    0%{
+        transform: translateX(10%);
+    }
+    50%{
+        transform: translateX(-140%);
+    }
+
+    100%{
+        transform: translateX(10%);
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "css-advanced",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "runsass": "sass sass/main.scss style.css -w ",
+    "live": "live-server",
+    "start": "concurrently \"npm run runsass\" \"npm run live\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "sass": "^1.83.0"
+  }
+}

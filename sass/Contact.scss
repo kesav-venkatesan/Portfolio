@@ -1,0 +1,37 @@
+.contact-me{
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    display: block;
+    height: 90%;
+    width: 100%;
+    
+
+    & h1{
+        font-size: 3.2rem;
+    }
+    & .email{
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 2fr 6fr;
+        font-size: 2rem;
+
+        input{
+            width: 80%;
+            height: 80%;
+            border: 2px solid linear-gradient(yellow,red);
+            background-color: transparent;
+            // border-image: linear-gradient(yellow,pink) 5;
+            border-radius: 5px;
+        };
+
+        &-row{
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+}

@@ -1,0 +1,494 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow: hidden;
+  color: white;
+  background-color: rgb(47, 44, 44);
+}
+
+.background {
+  width: 100vh;
+  height: 100vh;
+}
+.background .square {
+  position: absolute;
+  top: 10rem;
+  right: 15rem;
+  animation: square 5s linear infinite;
+}
+.background .square .sq {
+  height: 30rem;
+  width: 30rem;
+  z-index: 2;
+  position: relative;
+  background-image: radial-gradient(#b2f2bb, #2b8a3e);
+  border-radius: 20px;
+}
+.background .square .sq::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(circle, #2b8a3e, #b2f2bb);
+  z-index: 3;
+  border-radius: 20px;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.background .triangle {
+  position: absolute;
+  top: 30rem;
+  left: 15rem;
+  z-index: 2;
+  position: relative;
+  width: fit-content;
+  animation: triangle 6s linear infinite;
+}
+.background .triangle .tri {
+  width: 20rem;
+  height: 20rem;
+  background-image: linear-gradient(#ffe066, #fd7e14);
+  border-top-right-radius: 30%;
+  transform: rotate(-60deg) skewX(-30deg) scale(1, 0.866);
+}
+.background .triangle .tri::after, .background .triangle .tri::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: inherit;
+  border-top-right-radius: inherit;
+}
+.background .triangle .tri::before {
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707) translateY(-50%);
+}
+.background .triangle .tri::after {
+  transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translateX(50%);
+}
+.background .content {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100rem;
+  height: 100vh;
+  overflow: hidden;
+  backdrop-filter: blur(2rem);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto 2fr;
+  column-gap: 1rem;
+}
+.background .content .detail {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.background .content .detail .avator {
+  background: rgba(255, 255, 255, 0.364);
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 2rem;
+}
+.background .content .detail .avator img {
+  width: 15rem;
+}
+.background .content .detail .name {
+  text-align: center;
+}
+.background .content .detail .name h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+.background .content .detail .name div {
+  background-color: rgba(255, 255, 255, 0.364);
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+.background .content .detail .border {
+  width: 100%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.7490196078);
+  box-shadow: 200px 2rem 3.2rem rgba(0, 0, 0, 0.2);
+  height: 2px;
+  margin: 0 auto;
+}
+.background .content .detail .list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: start;
+  padding: 1rem;
+}
+.background .content .detail .list .item {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 2rem;
+}
+.background .content .detail .list .item-img {
+  display: flex;
+  align-items: end;
+  text-align: end;
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  width: fit-content;
+  box-shadow: -2px -2px 0px rgba(0, 0, 0, 0.1);
+}
+.background .content .detail .list .item-content {
+  text-align: start;
+}
+.background .content .detail .list .item-content p {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  color: #cbc9c9;
+}
+.background .content .detail .list .item-content h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.background .content .detail .media {
+  font-size: 2rem;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+}
+.background .content .detail .media a {
+  color: #cbc9c9;
+}
+.background .content .detail .media :last-child:hover {
+  color: #228be6;
+}
+.background .content .detail .media :nth-child(2):hover {
+  color: #ae22e6;
+}
+.background .content .detail .media :first-child:hover {
+  color: #228be6;
+}
+.background .content .horizontal-border {
+  height: 90%;
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.7490196078);
+  padding: 4rem 0;
+  margin: auto 0;
+}
+
+@keyframes triangle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes square {
+  0% {
+    transform: rotate(0deg) scale(1.1);
+  }
+  25% {
+    transform: rotate(-90deg) scale(0.9);
+  }
+  50% {
+    transform: rotate(-180deg) scale(1.1);
+  }
+  75% {
+    transform: rotate(-270deg) scale(0.9);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.1);
+  }
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(10%);
+  }
+  50% {
+    transform: translateX(-140%);
+  }
+  100% {
+    transform: translateX(10%);
+  }
+}
+.resume-details {
+  padding: 4rem 1rem;
+  position: relative;
+  height: 100%;
+}
+.resume-details h1 {
+  font-size: 3.2rem;
+}
+.resume-details .navigation {
+  display: flex;
+  gap: 4rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5rem 4rem;
+  background-color: rgba(196, 208, 208, 0.242);
+  border-bottom-left-radius: 2rem;
+  z-index: 45;
+}
+.resume-details .navigation a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.resume-details {
+  position: relative;
+}
+.resume-details .about-me {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+}
+.resume-details .about-me-border {
+  height: 4px;
+  width: 40px;
+  margin: 0.5rem 0 2rem 0;
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #1971c2, #74c0fc);
+}
+.resume-details .about-me-para {
+  font-size: 1.6rem;
+  color: transparent;
+  height: 55rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-weight: 500;
+  position: relative;
+}
+.resume-details .about-me-para p {
+  text-indent: 2rem;
+  letter-spacing: 1.1px;
+  text-align: justify;
+}
+.resume-details .about-me-para::-webkit-scrollbar {
+  background-color: transparent;
+  width: 1rem;
+}
+.resume-details .about-me-para > * {
+  margin-bottom: 2.5rem;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.862), rgb(255, 255, 255));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.resume-details .about-me-para .head-prime {
+  font-size: 2.6rem;
+  color: white;
+}
+.resume-details .about-me-para .skill {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 2rem;
+  gap: 2rem;
+}
+.resume-details .about-me-para .skill .skill-box {
+  display: flex;
+  gap: 1rem;
+  padding-left: 3rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 2px solid #7b7979;
+}
+.resume-details .about-me-para .skill .skill-box ion-icon {
+  font-size: 3rem;
+  color: #fefe26;
+}
+.resume-details .about-me-para .skill .skill-box .icon {
+  background-color: #7b7979;
+  border-radius: 5px;
+  padding: 1rem;
+  width: fit-content;
+  transition: all 0.2s;
+}
+.resume-details .about-me-para .skill .skill-box h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.resume-details .about-me-para .skill .skill-box h3 {
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  color: #7b7979;
+}
+.resume-details .about-me-para .skill .skill-box:hover .icon {
+  transform: scale(1.1);
+}
+.resume-details .about-me-para .technical {
+  bottom: 0;
+  position: relative;
+}
+.resume-details .about-me-para .technical .scroll {
+  position: absolute;
+  overflow-x: hidden;
+}
+.resume-details .about-me-para .technical .scroll::-webkit-scrollbar {
+  background-color: transparent;
+}
+.resume-details .about-me-para .technical img {
+  width: 100%;
+  height: 10rem;
+  filter: grayscale(100%);
+}
+.resume-details .about-me-para .technical img:hover {
+  filter: grayscale(0%);
+}
+.resume-details .about-me-para .technical .image-scroll {
+  display: flex;
+  gap: 4rem;
+  height: 100%;
+  width: 100%;
+  animation: scroll-left 10s infinite;
+}
+
+.resume {
+  height: 90%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  display: none;
+}
+.resume-header {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+.resume-header h1 {
+  font-size: 3.2rem;
+}
+.resume-content {
+  display: flex;
+  overflow-y: scroll;
+  flex-direction: column;
+  height: 55rem;
+}
+.resume-content::-webkit-scrollbar {
+  background-color: transparent;
+}
+.resume-content .education {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.resume-content .education ion-icon {
+  font-size: 2.5rem;
+  color: #ffda61;
+}
+.resume-content .timeline-background {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0 0 2rem;
+  border-left: 3px solid #7b7979;
+}
+.resume-content .timeline-background:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.resume-content .timeline-background .edu {
+  border: 3px solid #7b7979;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  position: relative;
+  margin-left: 2rem;
+}
+.resume-content .timeline-background .edu .head-sec {
+  margin: 1rem 0;
+}
+.resume-content .timeline-background .edu h3 {
+  color: #aaaaaa;
+}
+.resume-content .timeline-background .edu ul {
+  padding-left: 2rem;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+.resume-content .timeline-background .edu a {
+  text-decoration: none;
+}
+.resume-content .timeline-background .edu a:link, .resume-content .timeline-background .edu a:visited {
+  color: #fff;
+  transition: all 0.3s;
+}
+.resume-content .timeline-background .edu a:hover, .resume-content .timeline-background .edu a:active {
+  color: rgb(0, 200, 255);
+}
+.resume-content .timeline-background .edu::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 5px solid #4a4a4a;
+  top: 2.2rem;
+  left: -3.35rem;
+  background-color: #ffda61;
+  transition: all 0.1s;
+}
+.resume-content .timeline-background .edu:hover::before {
+  border: 3px solid #ffda61;
+  background-color: #4a4a4a;
+  left: -3.15rem;
+  top: 2.7rem;
+  box-shadow: 0 0 10px 1px rgb(255, 218, 97);
+}
+
+.contact-me {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  display: block;
+  height: 90%;
+  width: 100%;
+}
+.contact-me h1 {
+  font-size: 3.2rem;
+}
+.contact-me .email {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 2fr 6fr;
+  font-size: 2rem;
+}
+.contact-me .email input {
+  width: 80%;
+  height: 80%;
+  border: 2px solid linear-gradient(yellow, red);
+  background-color: transparent;
+  border-radius: 5px;
+}
+.contact-me .email-row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=style.css.map */
