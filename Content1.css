@@ -1,0 +1,131 @@
+.Hello {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.HiGradient {
+  font-size: 38px;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+.FullStackGradient {
+  background: linear-gradient(-135deg, #5a0252, #d206cf);
+  color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  background-size: 400% 200%;
+  animation: FullStackAnimation 1s infinite linear alternate-reverse;
+}
+@keyframes FullStackAnimation {
+  0% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
+}
+.NameGradient {
+  font-size: 20px;
+  background: linear-gradient(135deg, #757474, #c8c9ca);
+  color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  animation: NameAnimation 1s ease-in-out infinite alternate;
+  background-size: 200% auto;
+}
+@keyframes NameAnimation {
+  0% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
+}
+.summary {
+  text-align: left;
+  line-height: 2rem;
+  letter-spacing: 1px;
+  text-indent: 2rem;
+  padding: 12px 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+
+  position: relative;
+  background-color: #2f2f2f;
+  border-radius: 18px;
+}
+
+.summary:hover:after {
+  opacity: 1;
+}
+.summary:after {
+  content: "";
+  background: linear-gradient(135deg, rgb(4, 93, 182), rgb(93, 180, 238));
+  width: 101%;
+  height: 101%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  filter: blur(6px);
+  opacity: 0;
+  transition: all 1s;
+  border-radius: 20px;
+}
+.ViolteGradient {
+  background: linear-gradient(135deg, #a449f4, #e000bb);
+  color: transparent;
+  background-clip: text;
+  font-weight: bold;
+}
+#test {
+  width: 100%;
+  height: 1000px;
+  background-color: red;
+}
+.EducationHeading {
+  background: linear-gradient(
+    135deg,
+    #f4af02,
+    /* light yellow */ #f8b500,
+    /* rich yellow-orange */ #f7941e,
+    /* bright orange */ #ff6a00 /* dark orange */
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Roboto", sans-serif;
+  font-size: 42px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  
+}
+.eduContent {
+  display:flex; 
+  flex-direction:
+  column; 
+  gap:32px;
+  /* padding: 10px 24px; */
+  transition: all 500ms ease-in-out;
+  border: 3px solid gray;
+  background-color: #2f2f2f;
+  border-radius: 10px;
+}
+.eduContent p{
+  padding: 10px 24px;
+}
+.eduContent:hover {
+  transform: translateY(-10px);
+  box-shadow: 10px 12px 0 rgba(255, 255, 255, 0.085);
+}
+
+.eduContent{  
+  font-family: "Montserrat", sans-serif;
+}
+
+.school{
+  background-color: #0b7285;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}

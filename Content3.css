@@ -1,0 +1,29 @@
+.ProjectContainer{
+    display: grid;
+    padding: 10px;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 20px;
+    
+}
+.Project{
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding-bottom: 12px;
+    transition: all 0.5s ease-in-out;
+     background-color: rgba(128, 128, 128, 0.215);
+     text-decoration: none;
+}
+.Project h1 {
+   color: #ffffff;
+   font-size: 22px;
+   font-family: "Montserrat", sans-serif;
+   font-weight: 500;
+}
+.Project:hover{
+    transform: translateY(-10px);
+}

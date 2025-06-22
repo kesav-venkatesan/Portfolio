@@ -1,0 +1,116 @@
+.static{
+    display: grid;
+    justify-self: stretch;
+    align-self: stretch;
+    grid-template-rows: 4fr 3px 6fr;
+    /* padding: 30px 20px 10px 20px; */
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .static {
+    padding: 0;
+  }
+}
+/* Profile */
+.profile{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    padding: 10px 10px 20px 10px;
+
+    /* Flux */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+}
+
+/* Profile Image */
+.image{
+    height: 150px;
+    width: 150px;
+    background-color: rgba(240, 248, 255, 0.275);
+    border-radius: 20px;
+    background-image: url("assert/my-avatar.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Profile Name */
+.name{
+    font-size: 24px;
+    font-weight: bold;
+}
+/* Profile Role */
+.role{
+    font-size: 18px;
+    background-color: rgb(103, 100, 100);
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-transform: capitalize;
+    font-family: "Lato", sans-serif !important;
+     letter-spacing: 1px;
+}
+
+
+
+/* Profile Details */
+.profile_details{
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* profile Details (PD) Content */
+.pd{
+    display: flex;
+    gap: 10px;
+    letter-spacing: 1px;
+}
+.pd .icon{
+    width: 40px;
+    height: 40px;
+    box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.259);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pd .letters{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.pd .heading{
+    font-size: 14px;
+    color: #cbc9c9;
+}
+
+.pd .heading_content{
+    font-size: 18px;
+}
+
+.socialmedia{
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+    
+}
+
+.socialmedia a:first-child , .socialmedia a:last-child{
+    :hover{
+        color: rgb(74, 122, 235);
+    }
+}
+.socialmedia a:nth-child(2){
+    :hover{
+        color: rgb(255, 0, 251);
+    }
+}
