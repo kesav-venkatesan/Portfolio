@@ -36,7 +36,9 @@
 .nav-content {
   padding: 10px;
 }
-
+.C1,.C2,.C3,.C4{
+  padding-bottom: 50px;
+}
 .C1 {
   height: 100%;
   width: 100%;
