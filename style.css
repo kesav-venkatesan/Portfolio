@@ -33,7 +33,7 @@ body{
   }
 }
 .main{
-    width: 70vw;
+    width: 82vw;
     height: 95vh;
     border-radius: 20px;
     backdrop-filter: blur(10px);
@@ -43,7 +43,6 @@ body{
     align-items: center;
     box-shadow: 0 0 20px rgb(61, 58, 58);
     overflow: hidden;
-    grid-template-columns: 4fr 3px 6fr;
 
 }
 .separator{
