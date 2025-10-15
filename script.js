@@ -11,7 +11,7 @@ const C2 = document.querySelector(".C2");
 const C3 = document.querySelector(".C3");
 const C4 = document.querySelector(".C4");
 
-if (window.innerWidth < 1280  ) {
+if (window.innerWidth < 1000  ) {
   // Hide everything
   document.body.innerHTML = `
     <div style="display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #121212; color: white; text-align: center; padding: 20px;">
