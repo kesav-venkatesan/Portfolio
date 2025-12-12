@@ -30,8 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center
-    gap: 15px;
+    justify-content:center;
 
 }
 
@@ -115,13 +114,38 @@
     
 }
 
-.socialmedia a:first-child , .socialmedia a:last-child{
+.socialmedia a:last-child{
     :hover{
         color: rgb(74, 122, 235);
     }
 }
+
+.socialmedia a:first-child{
+    :hover{
+        color: rgb(151, 5, 151);
+    }
+}
 .socialmedia a:nth-child(2){
     :hover{
-        color: rgb(255, 0, 251);
+        color: rgb(225, 79, 11);
     }
+}
+
+.resume_btn{
+    background-color: transparent;
+    border:none;
+    padding-bottom: 12px;
+    padding-top: 8px;
+    text-align: center;
+    border-top: 2px solid #6e6c6c;
+    font-size: 24px;
+    color: #999a9a;
+    text-decoration: none;
+    font-family:'Roboto', sans-serif;
+    width: 100%;
+
+}
+
+.resume_btn:hover{
+        color: rgb(13, 176, 217);
 }
