@@ -102,3 +102,18 @@ document.getElementById("sendButton").addEventListener("click", function () {
   C4.classList.add("content-dont-display");
   messageSend.classList.remove('content-dont-display');
 });
+
+document.querySelectorAll(".Project").forEach(project => {
+  const video = project.querySelector("video");
+
+  project.addEventListener("mouseenter", () => {
+    video.currentTime = 0;
+    video.playbackRate = 2;   // 🔥 2x speed
+    video.play();
+  });
+
+  project.addEventListener("mouseleave", () => {
+    video.pause();
+    video.currentTime = 0;
+  });
+});
