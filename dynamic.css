@@ -78,6 +78,10 @@ height: 100%;
   width: 100%;
 }
 
+.c{
+  cursor: pointer;
+}
+
 /* Email */
 
 .email {
@@ -188,4 +192,8 @@ height: 100%;
 .messageSend div h1{
   text-align: center;
   padding: 24px 0;
+}
+
+.tabColorChange{
+  color: rgb(73, 188, 246) !important;
 }

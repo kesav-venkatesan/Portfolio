@@ -10,6 +10,10 @@ const C1 = document.querySelector(".C1");
 const C2 = document.querySelector(".C2");
 const C3 = document.querySelector(".C3");
 const C4 = document.querySelector(".C4");
+const messageSend=document.querySelector('.messageSend');
+
+const tabs_c = [c1,c2,c3,c4];
+const tabs_C =[C1,C2,C3,C4,messageSend];
 
 if (window.innerWidth < 1000  ) {
   // Hide everything
@@ -26,39 +30,36 @@ hideButton.addEventListener("click", () => {
   backSide.classList.toggle("hide_back");
 });
 
+function setActiveTab(activeTab) {
+  tabs_c.forEach(tab => tab.classList.remove("tabColorChange"));
+  activeTab.classList.add("tabColorChange");
+}
+
+function setActiveTabContent(activeTabContent){
+  tabs_C.forEach(content => content.classList.add("content-dont-display"));
+  activeTabContent.classList.remove("content-dont-display");
+}
+
 c1.addEventListener("click", () => {
-  C1.classList.remove("content-dont-display");
-  C2.classList.add("content-dont-display");
-  C3.classList.add("content-dont-display");
-  C4.classList.add("content-dont-display");
-  messageSend.classList.add('content-dont-display')
+  setActiveTab(c1);
+  setActiveTabContent(C1);
 });
 
 c2.addEventListener("click", () => {
-  C2.classList.remove("content-dont-display");
-  C1.classList.add("content-dont-display");
-  C3.classList.add("content-dont-display");
-  C4.classList.add("content-dont-display");
-  messageSend.classList.add('content-dont-display')
+  setActiveTab(c2);
+  setActiveTabContent(C2);
 });
 
 c3.addEventListener("click", () => {
-  C3.classList.remove("content-dont-display");
-  C2.classList.add("content-dont-display");
-  C1.classList.add("content-dont-display");
-  C4.classList.add("content-dont-display");
-  messageSend.classList.add('content-dont-display')
+  setActiveTab(c3);
+  setActiveTabContent(C3);
 });
 
 c4.addEventListener("click", () => {
-  C4.classList.remove("content-dont-display");
-  C2.classList.add("content-dont-display");
-  C3.classList.add("content-dont-display");
-  C1.classList.add("content-dont-display");
-  messageSend.classList.add('content-dont-display')
+  setActiveTab(c4);
+  setActiveTabContent(C4);
 });
 
-const messageSend=document.querySelector('.messageSend');
 
 
 

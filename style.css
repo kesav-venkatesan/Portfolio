@@ -16,6 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 body{
     background-color: #2f2c2c;
