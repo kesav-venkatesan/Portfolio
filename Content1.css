@@ -101,6 +101,22 @@
   font-weight: bold;
   
 }
+.CertificayionHeading{
+  background: linear-gradient(
+    135deg,
+    #25bb04,
+    /* light yellow */ #04f800,
+    /* rich yellow-orange */ #0e8d05,
+    /* bright orange */ #084602 /* dark orange */
+  );
+  background-clip: text;
+  color: transparent;
+  font-family: "Roboto", sans-serif;
+  font-size: 42px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
 .eduContent {
   display:flex; 
   flex-direction:
@@ -128,4 +144,38 @@
   background-color: #0b7285;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+}
+
+.company_list{
+  padding: 24px;
+}
+
+.company{
+  width: 100%;
+  background: #2f2f2f;
+  display: grid;
+  grid-template-columns: 1fr 5fr 2fr;
+  align-items: center;
+  border-radius: 20px;
+  position: relative;
+}
+.company img {
+  height: 96px;
+  width: auto;
+  object-fit: contain;
+}
+
+.company:after {
+  content: "";
+  background: linear-gradient(135deg, rgb(4, 93, 182), rgb(93, 180, 238));
+  width: 101%;
+  height: 101%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  filter: blur(6px);
+  opacity: 1;
+  transition: all 1s;
+  border-radius: 20px;
 }

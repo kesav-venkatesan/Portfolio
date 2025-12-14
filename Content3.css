@@ -1,11 +1,11 @@
-.ProjectContainer{
+.ProjectContainer,.CertificateContainer{
     display: grid;
     padding: 10px;
     grid-template-columns: repeat(2,minmax(0,1fr));
     gap: 20px;
     
 }
-.Project{
+.Project,.Certificate{
     display: flex;
     padding: 0;
     flex-direction: column;
@@ -25,6 +25,6 @@
    font-family: "Montserrat", sans-serif;
    font-weight: 500;
 }
-.Project:hover{
+.Project:hover,.Certificate:hover{
     transform: translateY(-10px);
 }

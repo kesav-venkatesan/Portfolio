@@ -26,6 +26,7 @@ if (window.innerWidth < 1000  ) {
     </div>
   `;
 }
+
 hideButton.addEventListener("click", () => {
   backSide.classList.toggle("hide_back");
 });
